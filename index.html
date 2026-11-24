@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival de Verano 2026 | Dana Mendoza</title>
+    <link rel="icon" type="image/png" href="img/icono.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FESTIVAL 2026</div>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#entradas">Entradas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Festival de Verano 2026</h1>
+            <p>El evento musical más esperado del año</p>
+            <a href="#entradas" class="cta-button">Comprar Entradas</a>
+        </section>
+
+        <section id="artistas">
+            <h2>Artistas Destacados</h2>
+            <div class="artistas-grid">
+                
+                <!-- Artista 1 -->
+                <div class="artista-card">
+                    <img src="img/imagen1.png" alt="Ivan Cornejo">
+                    <div class="artista-info">
+                        <h3>Ivan Cornejo</h3>
+                        <p class="genero">Regional Mexicano / Sad Sierreño</p>
+                        <p class="descripcion">Cantautor reconocido por éxitos como "Está Dañada" y su álbum <em>Mirada</em>.</p>
+                        <div class="concierto-info">
+                            <p><strong>Próximo Tour:</strong> Mirada Tour (Auditorio Nacional / Arena CDMX)</p>
+                            <p><strong>Precio Boleto Real:</strong> $1,250 - $4,800 MXN</p>
+                        </div>
+                        <div class="artista-redes">
+                            <a href="https://www.instagram.com/ivancornejoo/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://open.spotify.com/intl-es/artist/6PH3FLQAxtqYy46Zv08bpV?si=6EgWr5O2QVaLrJJENIk2NQ" target="_blank" rel="noopener noreferrer">Spotify</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artista 2 -->
+                <div class="artista-card">
+                    <img src="img/imagen2.png" alt="Latin Mafia">
+                    <div class="artista-info">
+                        <h3>Latin Mafia</h3>
+                        <p class="genero">Pop Alternativo / R&amp;B / Urbano</p>
+                        <p class="descripcion">Trío mexicano conformado por los hermanos Emilio, Milton y Mike de la Rosa, creadores de "Julietota".</p>
+                        <div class="concierto-info">
+                            <p><strong>Próximo Tour:</strong> Te Odio y Te Extraño Mucho Tour (Palacio de los Deportes)</p>
+                            <p><strong>Precio Boleto Real:</strong> $980 - $3,400 MXN</p>
+                        </div>
+                        <div class="artista-redes">
+                            <a href="https://www.instagram.com/latinmafia/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://www.youtube.com/@LATINMAFIA" target="_blank" rel="noopener noreferrer">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artista 3 -->
+                <div class="artista-card">
+                    <img src="img/imagen3.png" alt="Humbe">
+                    <div class="artista-info">
+                        <h3>Humbe</h3>
+                        <p class="genero">Pop / Indie Pop</p>
+                        <p class="descripcion">Cantautor regiomontano nominado al Latin Grammy, famoso por "El Poeta" y "Fantasmas".</p>
+                        <div class="concierto-info">
+                            <p><strong>Próximo Tour:</strong> Esencia Tour (Auditorio Explanada Puebla / Pepsi Center)</p>
+                            <p><strong>Precio Boleto Real:</strong> $850 - $2,950 MXN</p>
+                        </div>
+                        <div class="artista-redes">
+                            <a href="https://www.instagram.com/humbe/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://www.tiktok.com/@humbe" target="_blank" rel="noopener noreferrer">TikTok</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="entradas">
+            <h2>Tipos de Entradas</h2>
+            <div class="entradas-grid">
+                <div class="entrada-card">
+                    <h3>Entrada Básica</h3>
+                    <p class="precio">$1,150 MXN</p>
+                    <ul>
+                        <li>Acceso general al festival</li>
+                        <li>Conciertos principales de los 3 artistas</li>
+                        <li>Área general</li>
+                    </ul>
+                    <a href="#contacto"><button type="button">Reservar</button></a>
+                </div>
+
+                <div class="entrada-card destacada">
+                    <h3>Entrada VIP</h3>
+                    <p class="precio">$3,850 MXN</p>
+                    <ul>
+                        <li>Acceso preferencial VIP frente al escenario</li>
+                        <li>Convivencia Meet &amp; Greet</li>
+                        <li>Área VIP con barra libre </li>
+                    </ul>
+                    <a href="#contacto"><button type="button">Reservar</button></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formsprre -->
+        <section id="contacto">
+            <h2>Contacto y Reservaciones</h2>
+            <p class="duda">Si tienes alguna duda no dudes en escribirnos</p>
+            
+            <form action="https://formspree.io/f/mjywplge" method="POST" class="contacto-form">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje o duda:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Consulta  aqui..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contacto Oficial</h4>
+                <p>Email: danamendoza036@gmail.com</p>
+                <p>TEL: 244 145 7858</p>
+                <p>Alumna: Dana Mendoza - CBTis No. 16</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-button">
+            <p>&copy; 2026 Festival de Verano | Desarrollado por Dana Mendoza. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

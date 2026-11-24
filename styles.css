@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Evita que el menú fijo tape los títulos al dar clic */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Menú de navegación fijo */
+header {
+    background-color: #1a1a1a;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color .3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ccbaf7;
+}
+
+/* Sección Hero */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('img/fondo.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;  
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #ccbaf7;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Sección Artistas */
+#artistas {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+#artistas h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.artistas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.artista-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform .3s ease;
+}
+
+.artista-card:hover {
+    transform: translateY(-5px);
+}
+
+.artista-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.artista-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.artista-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+    color: #1a1a1a;
+}
+
+.artista-info .genero {
+    font-weight: bold;
+    color: #7c5cc4;
+    margin-bottom: 0.8rem;
+}
+
+.artista-info .descripcion {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.concierto-info {
+    background-color: #bce3f0;
+    border-left: 4px solid #83a5aa;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.concierto-info p {
+    margin-bottom: 0.3rem;
+}
+
+.artista-redes {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.artista-redes a {
+    background-color: #1a1a1a;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.artista-redes a:hover {
+    background-color: #ccbaf7;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+/* Sección Entradas */
+#entradas {
+    padding: 5rem 2rem;
+}
+
+#entradas h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.entradas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.entrada-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease;
+}
+
+.entrada-card.destacada {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.entrada-card:hover {
+    transform: translateY(-5px);
+}
+
+.entrada-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.precio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7c5cc4;
+    margin-bottom: 1rem;
+}
+
+.entrada-card.destacada .precio {
+    color: #ccbaf7;
+}
+
+.entrada-card ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.entrada-card li {
+    margin-bottom: .5rem;
+}
+
+.entrada-card button {
+    background-color: #ccbaf7;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: .8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.entrada-card button:hover {
+    transform: scale(1.05);
+}
+
+/* Sección Contacto (Formspree) */
+#contacto {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+#contacto h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.duda {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: #1a1a1a;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7c5cc4;
+}
+
+.btn-enviar {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #ccbaf7;
+    color: #1a1a1a;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+}
+
+.footer-content {
+    background-color: #1a1a1a;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.footer-section {
+    color: white;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: #ccbaf7;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.social-links a:hover {
+    color: #ccbaf7;
+}
+
+.footer-button {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #111;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Responsive: mantiene el menú fijo sin ocultarse */
+@media (max-width: 600px) {
+    header {
+        padding: 0.8rem 1rem;
+    }
+    nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    #hero h1 {
+        font-size: 2.3rem;
+    }
+}
